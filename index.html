@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.css">
-        <title>Calculadora de hidratación</title>
-    </head>
-    <body>
-        <div id="contenedor">
-            <div id="calculadora">
-                <div class="contenido">
-                    <h1>Hidratación Basal</h1>
-                    <p class="item">Completa todos los datos</p>
-                    <input class="item" id="peso" type="number" placeholder="Peso en kg" />
-                    <p class="item" id="error">* Debe completar todos los datos</p>
-                    <button class="item" id="calcular">Calcular</button>
-                    <p class="item resultado" id="flu">71cc/h</p>
-                    <p class="item resultado" id="man">m+m/2 : 105cc/h</p>
-                </div>
-            </div>
-            <div id="detalle">
-                <div class="contenido">
-                    <h1>¿Como se calcula?</h1>
-                    <ul>
-                        <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
+    <html lang = 'es'>
+        <head>
+            <title>Calculadora de Hidratación</title>
+            <link rel="icon" href="img/icono.ico">
+            <link rel="stylesheet" href="style/style.css">           
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        
+        <body>  
+            <div id="contenedor" class="contenedor_general">
+
+                <div class="contenido info">                    
+                    <h1 class="titulo2">¿Cómo se calcula?</h1>
+                    <u1 class="item">
+                        <li>De 0kg a 10kg, se calcula 100cc por cada kilo</li>
                         <li>Se suman 50cc por cada kilo de peso por arriba de 10kg, hasta 20kg</li>
-                        <li>De 20kg para arriba, se suman 20cc por cada kilo adicional</li>
-                    </ul>
+                        <li>De 20kg para arriba, se suman 20cc por cada kilo adicional hasta los 30kg</li>
+                        <li>En caso de superar los 30kg, se usa el método de superficie corporal, el cual usa una fórmula: Superficie corporal = <b>( (peso * 4) + 7) / (peso + 90)</b></li>
+                    </u1>             
                 </div>
-            </div>
-        </div>
-    </body>
-</html>
+
+                <div class="contenido calculadora">
+                        <h1 class="titulo1">Hidratación Basal</h1>
+                        <p class="item">Completa todos los datos</p>
+                        <input class="input item" id="peso" type = "number" placeholder="Peso en Kg" />
+                        <p class="item" id="error">* Debe completar todos los datos!</p>
+                        <button id = "calcular">Calcular</button>                    
+                </div>
+
+                <div class="contenido info">
+                        <h1 class="titulo2">Resultados Obtenidos: </h1>
+                        <p class = "item" id = "metodo"> <b>Método utilizado:</b> ____</p>
+                        <p class = "item" id = "flujo"> <b>Flujo:</b> 0cc/dia</p>
+                        <p class = "item" id = "mantenimiento"><b>Mantenimiento:</b> 0cc/h</p>
+                        <p class = "item" id = "mantenimientoSup"><b>Mantenimiento Superior (m+m/2):</b> 0cc/h</p>
+                        <p class = "item" id = "mant1500"><b>MantenimientoX1500:</b> 0ml</p>
+                        <p class = "item" id = "mant2000"><b>MantenimientoX2000:</b> 0mlí</p>   
+                </div>
+
+            </div> 
+        </body>
+        <script src="script/script.js" defer></script>
+    </html>
